@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olyfit Club - Transforme Seu Corpo</title>
+    <link rel="stylesheet" href="Styles/style.css" />
+    <link rel="icon" href="./imgs/OlyFit.png" />
+  </head>
+  <body>
+    <!-- Icons SVG -->
+    <svg style="display: none">
+      <!-- Relógio -->
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="13" r="8" />
+        <path d="M12 9v4l2 2" />
+        <path d="M5 3 2 6" />
+        <path d="m22 6-3-3" />
+        <path d="M6.38 18.7 4 21" />
+        <path d="M17.64 18.67 20 21" />
+      </symbol>
+
+      <!-- WhatsApp -->
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 
+           19.79 19.79 0 0 1-8.63-3.07 
+           19.5 19.5 0 0 1-6-6 
+           19.79 19.79 0 0 1-3.07-8.67A2 
+           2 0 0 1 4.11 2h3a2 2 0 0 1 2 
+           1.72c.12.9.37 1.77.72 2.59a2 
+           2 0 0 1-.45 2.11L8.09 9.91a16 
+           16 0 0 0 6 6l1.49-1.29a2 2 0 
+           0 1 2.11-.45c.82.35 1.69.6 
+           2.59.72a2 2 0 0 1 1.72 2z"
+        />
+      </symbol>
+
+      <!-- Instagram -->
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17" cy="7" r="1" />
+      </symbol>
+
+      <!-- Localização -->
+      <symbol id="icon-map" viewBox="0 0 24 24">
+        <path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10z" />
+        <circle cx="12" cy="11" r="2" />
+      </symbol>
+
+      <!-- Cartão -->
+      <symbol id="icon-card" viewBox="0 0 24 24">
+        <rect x="2" y="5" width="20" height="14" rx="2" />
+        <path d="M2 10h20" />
+      </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <img src="./imgs/OlyFit.png" alt="Olyfit Club" class="logo" />
+            <span class="logo-text">Olyfit Club</span>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="nav-desktop">
+            <button class="nav-link" data-scroll="modalidades">
+              Modalidades
+            </button>
+            <button class="nav-link" data-scroll="planos">Planos</button>
+            <button class="nav-link" data-scroll="horarios">Horários</button>
+            <button class="nav-link" data-scroll="galeria">Galeria</button>
+            <button class="nav-link" data-scroll="contato">Contato</button>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="nav-link mobile" data-scroll="modalidades">
+          Modalidades
+        </button>
+        <button class="nav-link mobile" data-scroll="planos">Planos</button>
+        <button class="nav-link mobile" data-scroll="horarios">Horários</button>
+        <button class="nav-link mobile" data-scroll="galeria">Galeria</button>
+        <button class="nav-link mobile" data-scroll="contato">Contato</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-pattern"></div>
+      <div class="container">
+        <div class="hero-content">
+          <img
+            src="./imgs/OlyFit.png"
+            alt="Olyfit Club Logo"
+            class="hero-logo"
+          />
+          <h1 class="hero-title">
+            Transforme seu <span class="glow-text">Corpo</span>
+          </h1>
+          <p class="hero-subtitle">
+            Musculação, FitDance, Funcional e Pilates em um só lugar
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary large" data-scroll="planos">
+              Ver Planos <span class="chevron">›</span>
+            </button>
+            <button class="btn-secondary large" data-scroll="contato">
+              Fale Conosco
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" data-scroll="modalidades">
+        <svg class="arrow" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section id="modalidades" class="section modalidades-section">
+      <div class="container">
+        <div class="section-header animate" data-target="modalidades-title">
+          <span class="badge">Nossas Modalidades</span>
+          <h2>Treine do <span class="accent">Seu Jeito</span></h2>
+          <p>
+            Diversas modalidades para todos os objetivos e níveis de
+            condicionamento
+          </p>
+        </div>
+        <div class="modalidades-grid">
+          <div class="card-modalidade animate" data-target="modalidade-0">
+            <div class="icon-container">
+              <span class="icon">🏋️</span>
+            </div>
+            <h3>Musculação</h3>
+            <p>Equipamentos modernos e ambiente motivador para seu treino</p>
+          </div>
+          <div class="card-modalidade animate" data-target="modalidade-1">
+            <div class="icon-container">
+              <span class="icon">💃</span>
+            </div>
+            <h3>FitDance</h3>
+            <p>Dança e diversão para queimar calorias com energia</p>
+          </div>
+          <div class="card-modalidade animate" data-target="modalidade-2">
+            <div class="icon-container">
+              <span class="icon">🔥</span>
+            </div>
+            <h3>Funcional</h3>
+            <p>Treinos dinâmicos para melhorar seu desempenho</p>
+          </div>
+          <div class="card-modalidade animate" data-target="modalidade-3">
+            <div class="icon-container">
+              <span class="icon">🧘</span>
+            </div>
+            <h3>Pilates</h3>
+            <p>Fortalecimento, flexibilidade e equilíbrio corporal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section planos-section">
+      <div class="container">
+        <div class="section-header animate" data-target="planos-title">
+          <span class="badge">Planos e Preços</span>
+          <h2>Escolha seu <span class="accent">Plano</span></h2>
+          <p>Taxa de matrícula: <span class="highlight">R$ 19,90</span></p>
+        </div>
+        <div class="planos-grid">
+          <div class="card-plano animate" data-target="plano-0">
+            <h3>Mensal</h3>
+            <div class="price">R$ 99,90<span>/mês</span></div>
+            <ul>
+              <li><span>⚡</span>Acesso ilimitado</li>
+              <li><span>⚡</span>Todas as modalidades</li>
+              <li><span>⚡</span>Horários flexíveis</li>
+              <li><span>⚡</span>Sem fidelidade</li>
+            </ul>
+            <button
+              class="btn-primary"
+              onclick="
+                window.open(
+                  'https://wa.me/5511945429451?text=Olá! Tenho interesse no plano Mensal.',
+                  '_blank',
+                )
+              "
+            >
+              Assinar Agora
+            </button>
+          </div>
+          <div class="card-plano popular animate" data-target="plano-1">
+            <div class="popular-badge">MAIS POPULAR</div>
+            <h3>Trimestral</h3>
+            <div class="price">R$ 94,90<span>/mês</span></div>
+            <ul>
+              <li><span>⚡</span>Acesso ilimitado</li>
+              <li><span>⚡</span>Todas as modalidades</li>
+              <li><span>⚡</span>Economia de R$ 15/mês</li>
+              <li><span>⚡</span>3 meses de treino</li>
+            </ul>
+            <button
+              class="btn-primary"
+              onclick="
+                window.open(
+                  'https://wa.me/5511945429451?text=Olá! Tenho interesse no plano Trimestral.',
+                  '_blank',
+                )
+              "
+            >
+              Assinar Agora
+            </button>
+          </div>
+          <div class="card-plano animate" data-target="plano-2">
+            <h3>Anual</h3>
+            <div class="price">R$ 89,90<span>/mês</span></div>
+            <ul>
+              <li><span>⚡</span>Acesso ilimitado</li>
+              <li><span>⚡</span>Todas as modalidades</li>
+              <li><span>⚡</span>Maior economia</li>
+              <li><span>⚡</span>12 meses de treino</li>
+            </ul>
+            <button
+              class="btn-primary"
+              onclick="
+                window.open(
+                  'https://wa.me/5511945429451?text=Olá! Tenho interesse no plano Anual.',
+                  '_blank',
+                )
+              "
+            >
+              Assinar Agora
+            </button>
+          </div>
+        </div>
+
+        <!-- Parceiros -->
+        <div class="parceiros animate" data-target="parceiros">
+          <div class="parceiros-card">
+            <h3>Aceitamos Wellhub & TotalPass</h3>
+            <div class="parceiros-content">
+              <img
+                src="https://customer-assets.emergentagent.com/job_a846ca5f-d175-4185-98fc-beaebbce13f5/artifacts/ti051t3z_image.png"
+                alt="Wellhub TotalPass"
+                class="parceiros-img"
+              />
+              <div>
+                <p>
+                  <span>Alunos Wellhub e TotalPass</span> que fizerem 12
+                  check-ins no mesmo mês
+                </p>
+                <p class="highlight">Concorrem a BRINDES!</p>
+                <p class="small">Sorteio no último dia de cada mês</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horários -->
+    <section id="horarios" class="section horarios-section">
+      <div class="container">
+        <div class="section-header animate" data-target="horarios-title">
+          <span class="badge">Horário de Funcionamento</span>
+          <h2>Treine no <span class="accent">Seu Horário</span></h2>
+        </div>
+        <div class="horarios-list">
+          <div class="card-horario animate" data-target="horario-0">
+            <div class="horario-icon">
+              <svg><use href="#icon-clock"></use></svg>
+            </div>
+            <div>
+              <h3>Segunda à Sexta</h3>
+              <p>6h às 23h</p>
+            </div>
+            <span class="status open">Aberto</span>
+          </div>
+          <div class="card-horario animate" data-target="horario-1">
+            <div class="horario-icon">
+              <svg><use href="#icon-clock"></use></svg>
+            </div>
+            <div>
+              <h3>Sábado</h3>
+              <p>8h às 14h</p>
+            </div>
+            <span class="status open">Aberto</span>
+          </div>
+          <div class="card-horario animate" data-target="horario-2">
+            <div class="horario-icon">
+              <svg><use href="#icon-clock"></use></svg>
+            </div>
+            <div>
+              <h3>Domingo e Feriado</h3>
+              <p>9h às 13h</p>
+            </div>
+            <span class="status open">Aberto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="section galeria-section">
+      <div class="container">
+        <div class="section-header animate" data-target="galeria-title">
+          <span class="badge">Nossa Academia</span>
+          <h2>Conheça nosso <span class="accent">Espaço</span></h2>
+        </div>
+        <div class="galeria-grid">
+          <div class="galeria-card animate" data-target="galeria-0">
+            <div class="galeria-icon">🏋️</div>
+            <div class="galeria-overlay">
+              <span>Área de Musculação</span>
+            </div>
+          </div>
+          <div class="galeria-card animate" data-target="galeria-1">
+            <div class="galeria-icon">🔥</div>
+            <div class="galeria-overlay">
+              <span>Espaço Funcional</span>
+            </div>
+          </div>
+          <div class="galeria-card animate" data-target="galeria-2">
+            <div class="galeria-icon">🧘</div>
+            <div class="galeria-overlay">
+              <span>Sala de Pilates</span>
+            </div>
+          </div>
+          <div class="galeria-card animate" data-target="galeria-3">
+            <div class="galeria-icon">💃</div>
+            <div class="galeria-overlay">
+              <span>Área de FitDance</span>
+            </div>
+          </div>
+          <div class="galeria-card animate" data-target="galeria-4">
+            <div class="galeria-icon">⚙️</div>
+            <div class="galeria-overlay">
+              <span>Equipamentos Modernos</span>
+            </div>
+          </div>
+          <div class="galeria-card animate" data-target="galeria-5">
+            <div class="galeria-icon">🚿</div>
+            <div class="galeria-overlay">
+              <span>Vestiários</span>
+            </div>
+          </div>
+        </div>
+        <p class="galeria-note">Em breve mais fotos do nosso espaço!</p>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section contato-section">
+      <div class="container">
+        <div class="section-header animate" data-target="contato-title">
+          <span class="badge">Entre em Contato</span>
+          <h2>Vamos <span class="accent">Conversar?</span></h2>
+        </div>
+        <div class="contato-grid">
+          <!-- Form -->
+          <form
+            class="contato-form animate"
+            data-target="form-contato"
+            id="contatoForm"
+          >
+            <div class="form-group">
+              <label>Nome</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Seu nome completo"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Telefone</label>
+              <input type="tel" id="phone" placeholder="(11) 99999-9999" />
+            </div>
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea
+                id="message"
+                placeholder="Como podemos ajudar?"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary full">
+              Enviar via WhatsApp →
+            </button>
+          </form>
+
+          <!-- Info Cards -->
+          <div class="info-cards animate" data-target="info-contato">
+            <div class="info-card">
+              <div class="info-icon">
+                <svg><use href="#icon-phone"></use></svg>
+              </div>
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/5511945429451" target="_blank"
+                >(11) 9 4542-9451</a
+              >
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <svg><use href="#icon-instagram"></use></svg>
+              </div>
+              <h3>Instagram</h3>
+              <a href="https://instagram.com/OlyFitClub" target="_blank"
+                >@OlyFitClub</a
+              >
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <svg><use href="#icon-map"></use></svg>
+              </div>
+              <h3>Endereço</h3>
+              <p>Av. Dolores Lupiano Moioli, 81</p>
+              <a
+                href="https://share.google/Kz8dxLe454rZnySiX"
+                target="_blank"
+                class="maps-link"
+                >Ver no Google Maps →</a
+              >
+            </div>
+            <div class="info-card full">
+              <div class="info-icon">
+                <svg><use href="#icon-card"></use></svg>
+              </div>
+              <h3>Formas de Pagamento</h3>
+              <p>Aceitamos cartões de crédito, débito e PIX</p>
+              <div class="payment-logos">
+                <span>💳 Visa</span>
+                <span>💳 Mastercard</span>
+                <span>💳 Elo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <img src="./imgs/OlyFit.png" alt="Olyfit Club" class="footer-logo" />
+        <p>© 2026 Olyfit Club. Todos os direitos reservados.</p>
+        <p class="slogan">Transforme seu corpo, transforme sua vida.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/5511945429451"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="wa-icon"><svg><use href="#icon-phone"></use></svg></span>
+    </a>
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>
